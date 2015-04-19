@@ -5,11 +5,9 @@ output:
     keep_md: true
 ---
 
-
 ## Loading and preprocessing the data
 # Read Activity monitoring data ('amd') data set from the working directory
 amd <- read.csv("./activity/activity.csv", stringsAsFactors = FALSE)
-
 
 ## What is mean total number of steps taken per day?
 # Group observations by date and sum steps taken per each day
@@ -45,8 +43,6 @@ ggplot(total.steps.per.day, aes(date, total)) + geom_bar(fill = "chartreuse",
     size = 1) + labs(title = "Total number of steps for each particular day") + 
     labs(x = "Date", y = "Total number of steps")
 
-
-
 ## What is the average daily activity pattern?
 # Create data frame with number of steps taken, averaged across all days
 avg.intvl.steps <- amd %.% group_by(interval) %.% summarise(avg.intvl = mean(steps, 
@@ -59,7 +55,6 @@ max.num.of.steps.interv <- avg.intvl.steps[max.num.of.steps.interv.ind, 1]
 qplot(interval, avg.intvl, data = avg.intvl.steps) + geom_line() + geom_vline(xintercept = max.num.of.steps.interv, 
     color = "red", linetype = "dashed", size = 1) + labs(title = "Time series of the 5-minute interval and the average number of steps taken, \n averaged across all days") + 
     labs(x = "5-minute interval signature", y = "number of steps ")
-
 
 ## Imputing missing values
 # Calculate and report the total number of missing values in the dataset
