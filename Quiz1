@@ -2,6 +2,7 @@
 # Problem 1.
 # Which of the following are steps in building a machine learning algorithm?
 # Deciding on an algorithm, Creating features, Evaluating the prediction.
+# Collecting data to answer the question
 
 # Problem 2.
 # Suppose we build a prediction algorithm on a data set and it is 100% accurate on that data set. 
@@ -19,6 +20,7 @@
 # values like yes/no, disease/normal, clicked/didn't click)?
 # Specificity, Sensitivity
 # Predictive value of a positive
+# Accuracy
 
 # Problem 5.
 # Suppose that we have created a machine learning algorithm that predicts whether a link will be 
