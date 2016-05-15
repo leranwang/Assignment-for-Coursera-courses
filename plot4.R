@@ -6,7 +6,7 @@ for( i in 3:9 ){
     df[[i]] <- sapply(df[[i]], as.character)
     df[[i]] <- sapply(df[[i]], as.numeric)
 }
-win.graph(200,200)
+win.graph(480,480)
 par(mfcol = c(2,2))
 with(df, {plot(DateTime, Global_active_power, type = "n", xlab = "daytime", ylab = "Global Active Power (kilowatts)" , axes = F, frame.plot=TRUE)
           axis(1, at=c(as.numeric(min(df$DateTime)), as.numeric(min(df$DateTime))+86400, as.numeric(min(df$DateTime))+2*86400), labels=c("Thu", "Fri", "Sat"))
